@@ -4,8 +4,7 @@ import bodyParser from 'body-parser';
 const route = new express.Router();
 
 route.get('/', async (req,res) => {
-    const x = await Profile.find();
-    res.send(x);
+    res.send("Welcome!!");
 })
 
 route.post('/signup', async (req,res) => {
