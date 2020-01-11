@@ -11,13 +11,18 @@ route.post('/signup', async (req,res) => {
     console.log(req.body);
     const user = new Profile(req.body);
     try{
+
+        if(Profile.findOne({email:req.body.email})){
+            throw new Error("email exits");
+        }
         await user.save();
         res.status(200).send("User Signup Successful!!");
     }
     catch(error){
-        res.status(500).send(error);
+        res.status(500).send(error.message);
     }
 });
+
 
 route.post( '/unsubscribe', async( req,res) => {
     try{
