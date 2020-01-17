@@ -2,7 +2,7 @@
 
 This application will send you a remainder to drink water in every 4 hours.
 
-## All the http requests must be sent to the given url ${url}
+## All the http requests must be sent to the https://water-remainder.herokuapp.com/ 
 
 ## Working
 
